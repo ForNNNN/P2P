@@ -3,19 +3,19 @@
 <mapper namespace="com.yyw.p2p.servicecore.mapper.DictMapper">
 
     <insert id="insertBatch">
-        insert into dict(
-            id,
-            parent_id,
-            name,
-            value,
-            dict_code,
-        )values
+        insert into dict (
+            id ,
+            parent_id ,
+            name ,
+            value ,
+            dict_code
+        ) values
         <foreach collection="list" item="item" index="index" separator=",">
             (
-             #{item.id},
-             #{item.parent_id},
-             #{item.name},
-             #{item.value},
+             #{item.id} ,
+             #{item.parentId} ,
+             #{item.name} ,
+             #{item.value} ,
              #{item.dictCode}
             )
         </foreach>

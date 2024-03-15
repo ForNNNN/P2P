@@ -13,7 +13,8 @@ spring:
     username: root
     password: 113089Cloudconepw@
 
-mybatis-plus: #mybatis
+mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-  mapper-locations: classpath:com/yyw/servicecore/mapper/xml/*.xml #Mybatis对应的xml文件的路径
+  mapper-locations: classpath:com/yyw/p2p/servicecore/mapper/xml/*.xml
+  #手动配置Mybatis对应的xml文件的路径（如果不配置则默认在resources/xml目录下），并且该路径也必须在resources目录下，因为java目录下的资源文件在打包时会被忽略。除非在pom.xml中配置
