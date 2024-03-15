@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <contextName>P2P</contextName>
+    <!-- 日志的输出的目录 -->
+    <property name="log.path" value="/Users/yyw/IdeaProjects/P2P/log" />
+
+    <!--控制台日志格式：彩色日志-->
+    <!-- magenta:洋红 -->
+    <!-- boldMagenta:粗红-->
+    <!-- cyan:青色 -->
+    <!-- white:白色 -->
+    <!-- magenta:洋红 -->
+    <property name="CONSOLE_LOG_PATTERN" value="%yellow(%date{yyyy-MM-dd HH:mm:ss}) %highlight([%-5level]) %green(%logger) %msg%n"/>
+
+    <!--文件日志格式-->
+    <property name="FILE_LOG_PATTERN" value="%date{yyyy-MM-dd HH:mm:ss} [%-5level] %thread %file:%line %logger %msg%n" />
+
+    <!--编码-->
+    <property name="ENCODING" value="UTF-8" />
+</configuration>
+
+
+<!--
+SpringBoot默认集成的日志框架使用的是SLF4j+Logback组合。
+在resources文件夹下创建logback.xml，logback会自动在该目录下加载该配置文件，在该文件中对打印日志的级别、形式、保存路径等进行配置。
+-->

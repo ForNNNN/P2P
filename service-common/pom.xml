@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.yyw</groupId>
+        <artifactId>P2P</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <groupId>com.yyw.P2P</groupId>
+    <artifactId>service-common</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>service-common</name>
+    <description>service-common</description>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>com.yyw.P2P</groupId>
+            <artifactId>common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <!--swagger-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+        </dependency>
+
+        <!--swagger ui-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <image>
+                        <builder>paketobuildpacks/builder-jammy-base:latest</builder>
+                    </image>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

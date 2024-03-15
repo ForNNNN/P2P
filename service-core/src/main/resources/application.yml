@@ -1,0 +1,19 @@
+server:
+  port: 8110
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: service-core
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://root@yyw.com/P2P?characterEncoding=utf-8
+    username: root
+    password: 113089Cloudconepw@
+
+mybatis-plus: #mybatis
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:com/yyw/servicecore/mapper/xml/*.xml #Mybatis对应的xml文件的路径
